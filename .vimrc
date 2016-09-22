@@ -41,6 +41,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Color scheme
 Plugin 'AlessandroYorba/Sierra'
 
+"Color scheme
 Plugin 'morhetz/gruvbox'
 
 " Fuzzy file searching
@@ -50,11 +51,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'Raimondi/delimitMate'
 
 " angular status bar. Aesthetic
-" Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 
 " compiler error checker: Multi language support
 Plugin 'scrooloose/syntastic'
-
 
 " Code completion for c like languages
 Plugin 'Valloric/YouCompleteMe'
