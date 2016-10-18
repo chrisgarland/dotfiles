@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -38,14 +38,14 @@ Plugin 'RussellBradley/vim-warriors-away'
 " Color scheme
 Plugin 'altercation/vim-colors-solarized'
 
-"Color scheme
+" Color scheme
 Plugin 'AlessandroYorba/Sierra'
 
-"Color scheme
+" Color scheme
 Plugin 'morhetz/gruvbox'
 
 " Fuzzy file searching
-"Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 
 " auto-inserts closing bracket
 Plugin 'Raimondi/delimitMate'
@@ -86,14 +86,14 @@ Plugin 'mattn/emmet-vim'
 " C code completion
 " Plugin 'mbbill/code_complete'
 
-" Character/word move around file 
+" Character/word move around file
 Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -103,6 +103,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+" Remap <leader> to <Space>
+let mapleader = "\<Space>"
 
 " Configuration file for vim
 set number		" show absolute line numbers
@@ -124,6 +127,12 @@ set statusline+=%*
 " Settings for airline. Show status bar even when only 1 file open
 set laststatus=2
 
+" Add a space after commenting
+let g:NERDSpaceDelims = 1
+
+" CtrlP settings
+" let g:ctrlp_map='<Leader>p'
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -132,11 +141,11 @@ let g:syntastic_check_on_wq = 0
 
 
 " Settings for UltiSnips
-let g:UltiSnipsExpandTrigger="<C-k>"
-
-
-" Remap <leader> to <Space>
-let mapleader = "\<Space>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsEditSplit="vertical"
+let g:ultisnips_java_brace_style="nl"
 
 " Key mapping for easyMotion
 map <C-n> <Leader><Leader>w
@@ -145,8 +154,12 @@ map <C-f> <Leader><Leader>f
 map <C-g> <Leader><Leader>F
 
 " Auto cretes new line after opening parenthises...
-imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"    
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
+" Find (automatically) trailing whitespace
+match ErrorMsg '\s\+$'
+" Delete trailing whitespace
+nnoremap <leader>rtw :%s/\s\+$//e<CR>
 
 filetype plugin indent on
 " show existing tab with 8 spaces width
@@ -159,10 +172,10 @@ set expandtab
 set cursorline
 
 " on jk is escape
-inoremap jk <esc> 
+inoremap jk <esc>
 
 " put ; at end of line
-inoremap <leader>; <C-o>A; 
+inoremap <leader>; <C-o>A;
 
 " put {} below current line
 inoremap <leader>[ <C-o>o{}<C-o>i<CR><C-o>O
@@ -176,26 +189,26 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 " Enable syntax highlighting
 syntax enable
 
-"----------MOLOKAI------------
-"let g:molokai_original = 1
-"colorscheme molokai
-"-----------------------------
+" ----------MOLOKAI------------
+" let g:molokai_original = 1
+" colorscheme molokai
+" -----------------------------
 
-"----------WARRIORS-----------
-"colorscheme warriors-away
-"-----------------------------
+" ----------WARRIORS-----------
+" colorscheme warriors-away
+" -----------------------------
 
-"----------SIERRA-------------
-"let g:sierra_Sunset = 1
-"colorscheme sierra
-"-----------------------------
+" ----------SIERRA-------------
+" let g:sierra_Sunset = 1
+" colorscheme sierra
+" -----------------------------
 
-"----------SOLARIZED----------
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"-----------------------------
+" ----------SOLARIZED----------
+" set background=dark
+" let g:solarized_termcolors=256
+" colorscheme solarized
+" -----------------------------
 
-"----------GRUVBOX------------
+" ----------GRUVBOX------------
 colorscheme gruvbox
-"-----------------------------
+" -----------------------------
