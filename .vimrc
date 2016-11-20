@@ -211,4 +211,5 @@ syntax enable
 
 " ----------GRUVBOX------------
 colorscheme gruvbox
+set background=dark
 " -----------------------------
