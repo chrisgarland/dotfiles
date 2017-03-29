@@ -141,7 +141,7 @@ let g:syntastic_check_on_wq = 0
 
 
 " Settings for UltiSnips
-let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 let g:UltiSnipsEditSplit="vertical"

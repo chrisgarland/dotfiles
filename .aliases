@@ -16,4 +16,6 @@ alias oose='cd ~/curtin/units/2016_s2/COMP2003'
 #alias mvim='TERM=screen-256color /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/MacOS/MacVim'
 alias vim='TERM=screen-256color /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/MacOS/Vim'
 alias tmux='TERM=screen-256color-bce tmux'
-
+alias ccom='cd /Users/chrisgarland/curtin/units/2017_s1/CNCO2000'
+alias smet='cd /Users/chrisgarland/curtin/units/2017_s1/ISAD3002'
+alias crypto='cd /Users/chrisgarland/curtin/units/2017_s1/ISEC2000'
