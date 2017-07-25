@@ -89,6 +89,12 @@ Plugin 'mattn/emmet-vim'
 " Character/word move around file
 Plugin 'easymotion/vim-easymotion'
 
+" Syntax highlighting for ReactJS
+Plugin 'mxw/vim-jsx'
+
+" Plugin for puppet  highlighting
+Plugin 'rodjek/vim-puppet'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -106,6 +112,10 @@ filetype plugin indent on    " required
 "
 " Remap <leader> to <Space>
 let mapleader = "\<Space>"
+
+" emmet settings
+" leader key previously <C - y>
+let g:user_emmet_leader_key=','
 
 " Configuration file for vim
 set number		" show absolute line numbers
@@ -126,6 +136,9 @@ set statusline+=%*
 
 " Settings for airline. Show status bar even when only 1 file open
 set laststatus=2
+
+" Allow JSX in normal JS files (ReactJS)
+let g:jsx_ext_required = 0
 
 " Add a space after commenting
 let g:NERDSpaceDelims = 1
@@ -162,9 +175,9 @@ match ErrorMsg '\s\+$'
 nnoremap <leader>rtw :%s/\s\+$//e<CR>
 
 filetype plugin indent on
-" show existing tab with 8 spaces width
+" show existing tab with 2 spaces width
 set tabstop=4
-" when indenting with '>', use 8 spaces width
+" when indenting with '>', use 2 spaces width
 set shiftwidth=4
 " On pressing tab, insert 8 spaces
 set expandtab
@@ -178,13 +191,16 @@ inoremap jk <esc>
 inoremap <leader>; <C-o>A;
 
 " put {} below current line
-inoremap <leader>[ <C-o>o{}<C-o>i<CR><C-o>O
+inoremap <leader>[ <C-o>A {}<C-o>i<CR><C-o>O
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
+
+" (html) Syntax highlighting for .ejs files
+au BufWrite,BufRead *.ejs set filetype=html
 
 " Enable syntax highlighting
 syntax enable

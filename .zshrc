@@ -8,6 +8,8 @@ export ZSH=/Users/chrisgarland/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="af-magic"
 # ZSH_THEME="agnoster"
+# ZSH_THEME="avit"
+# ZSH_THEME="half-life"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,7 +58,14 @@ plugins=(tmux)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Users/chrisgarland/bin:/Users/chrisgarland/.rvm/bin:/Users/chrisgarland/.local/bin:/usr/local/mysql/bin:/usr/local/Cellar/pandoc/1.17.0.3/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Users/chrisgarland/bin:/Users/chrisgarland/.rvm/bin:$HOME.local/bin:/usr/local/mysql/bin:/usr/local/Cellar/pandoc/1.17.0.3/bin:/usr/local/go/bin:$JAVA_HOME/bin:$HOME/Library/Python/2.7/bin"
+
+export GOPATH="$HOME/Documents/develop/go/go_projects"
+export GOBIN="$GOPATH/bin"
+export DEVPATH="$HOME/Documents/develop/"
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+export JAVA_HOME
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -118,3 +127,10 @@ function define_vim_wrappers()
 }
 
 define_vim_wrappers
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
